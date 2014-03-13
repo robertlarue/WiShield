@@ -54,6 +54,7 @@ void webserver_appcall(void) {
 #define ISO_nl     0x0a
 #define ISO_space  0x20
 #define ISO_slash  0x2f
+// This is the 'T' letter in ISO-8859-1 Character Set
 #define ISO_T      0x54
 
 const char http_get[5] = {0x47, 0x45, 0x54, 0x20, }; // "GET "
@@ -97,6 +98,7 @@ static int handle_connection(struct webserver_state *s) {
     PSOCK_CLOSE_EXIT(&s->p);
   }
   
+  // This is the web page served by the webserver
   PSOCK_SEND_STR(&s->p, "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\r\n");
   PSOCK_SEND_STR(&s->p, "<HTML>\r\n<HEAD>\r\n\t<META http-equiv=\"Content-type\" content=\"text/html;charset=UTF-8\">\r\n\t<TITLE>Arduino WiShield 2.0</TITLE>\r\n");
   PSOCK_SEND_STR(&s->p, "\t<STYLE type=\"text/css\">\r\n\t\tP,H1 {text-align: center;}\r\n\t</STYLE>\r\n</HEAD>\r\n<BODY>\r\n");
@@ -108,8 +110,8 @@ static int handle_connection(struct webserver_state *s) {
       // not supported
       PSOCK_SEND_STR(&s->p, "\t<P>Request not supported</P>\r\n");
     } else {
-      // Toggle WiShield 2.0 Led
       PSOCK_SEND_STR(&s->p, "\t<P>TOGGLE LED command received</P>\r\n");
+      // Toggle WiShield 2.0 Led status
       digitalWrite(9, !digitalRead(9));
     }
   }

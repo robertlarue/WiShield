@@ -47,10 +47,12 @@ unsigned char security_passphrase_len;
 
 void setup() {
   WiFi.init();
+  
+  // Set pin 9 as an output (this is the led on the WiShield 2.0
   pinMode(9,OUTPUT);
 }
 
-// This is the webpage that is served up by the webserver
+// This is the header sent to the browser before the real web page served by the webserver
 const prog_char webpage[] PROGMEM = {
   "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n"
 };
