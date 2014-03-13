@@ -1,0 +1,14 @@
+SPI
+	Slave Select (SS):		pin 10 (port B, pin 2)
+	Clock (SCK):			pin 13 (port B, pin 5)
+	Master in, Slave out (MISO):	pin 12 (port B, pin 4)
+	Master out, Slave in (MOSI):	pin 11 (port B, pin 3)
+
+INTERRUPT (Uses only one of the following, depending on jumper setting)
+	INT0:	pin 2 (port D, pin 2)
+	DIG8:	pin 8 (port B, pin 0)
+	LED:	pin 9 (port B, pin 1) To regain use of this pin, remove the LED jumper cap
+
+5V Power
+
+GND
