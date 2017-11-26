@@ -42,7 +42,7 @@
 #include <avr/sfr_defs.h>
 
 #include "clock-arch.h"
-#include "Arduino.h"
+#include <Arduino.h>
 
 #if 0
 //Counted time
