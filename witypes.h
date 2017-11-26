@@ -67,6 +67,6 @@ typedef unsigned int U16;
 typedef unsigned long u32;
 typedef unsigned long U32;
 
-typedef bool boolean;
+typedef unsigned char boolean;
 
 #endif /* WITYPES_H_ */
