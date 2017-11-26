@@ -48,7 +48,7 @@ extern U8 security_passphrase_len;
 extern U8 security_type;
 extern U8 wireless_mode;
 
-extern uchar wep_keys[];
+extern unsigned char wep_keys[];
 
 extern const char webpage[];
 extern const char twitter[];
