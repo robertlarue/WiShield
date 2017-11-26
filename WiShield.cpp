@@ -44,7 +44,7 @@ extern "C" {
   void stack_process(void);
 }
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "WiShield.h"
 
 void WiShield::init()
